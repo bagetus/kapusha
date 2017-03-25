@@ -5,7 +5,7 @@ function db_connect()
 //$host = '127.0.0.1:3306';
 $host = 'kapusha.local.dev/';
 $user = 'root';
-$pswd = '';
+$pswd = 'q1w2e3';
 $db = 'Kapusha';
 
 $connection = mysql_connect($host, $user, $pswd);
