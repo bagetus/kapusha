@@ -1,0 +1,105 @@
+/*************************** Основные пункты */
+#mainmenu{
+	background-color: #ff9a00;
+    height:40px;
+    padding:0;
+    width:1200px;
+    position: relative;
+    z-index:999; /* для отображения подпунктов поверх остальных блоков */
+    margin-top: 52px;
+}
+#mainmenu ul, /* сбрасываем поля и отступы у списков */
+#mainmenu ul ul {
+	list-style:none;
+    padding:0;
+    margin:0;
+}
+#mainmenu ul {	
+    clear:left;
+    position:relative;
+    right:50%;
+    height:40px;
+    float:right;
+    text-align:center;
+    font:16px Helvetica, sans-serif;  
+}
+#mainmenu ul li {
+    position:relative;
+    left:50%;
+    float:left;
+    height:40px;
+    padding:0;
+    margin:0
+}
+#mainmenu ul li:last-child {
+	border:none;
+	box-shadow:none
+}	
+#mainmenu ul li a {
+    display:block;
+    color: white;
+    text-decoration: none;
+    padding:10px 20px
+}
+#mainmenu ul li a:hover {
+	color: #4b4b4b;
+}
+
+#mainmenu ul li ul a:hover {
+	background-color: #4b4b4b;
+	color: white;
+}
+
+#mainmenu ul li:hover > ul {
+	opacity: 1;
+	visibility: visible;
+	margin: 0;
+	background-color: #F08C00;
+	color: white;
+}
+ 
+/*************************** Выпадающие подпункты */
+#mainmenu ul li ul {
+	background: #4b4b4b;
+	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-ms-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;	
+	text-transform:none;
+	opacity: 0;
+	visibility: hidden;
+    position:absolute;
+    left:0;
+    top:40px;
+    font-size:12px;
+	height:auto;
+    width:100%; 
+}
+#mainmenu ul li ul li {
+	border:none;
+    position:relative;
+	left:0;
+    float:none;
+    height:auto;
+    margin:0;
+    text-align:left !important;
+}
+#mainmenu ul li ul li:last-child {
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+#mainmenu ul li ul li a {
+    padding:10px 8px;
+    border:none
+}
+
+/*************************** Выпадающие пункты второго уровня */
+#mainmenu ul li ul li ul {
+	top: 0;
+	left: 101%;
+	margin: 0 0 0 20px;
+}
+
+
